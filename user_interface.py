@@ -15,6 +15,7 @@ class UserInterface:
         print("\033[1;34;40m3. Multiplication\033[0m")
         print("\033[1;35;40m4. Division\033[0m")
 
+
     def get_operation_choice():
         while True:
             try:
@@ -37,12 +38,12 @@ class UserInterface:
         return num1, num2
     
     def display_result(num1, operator_symbol, num2, result):
-        print("{} {} {} = {}"(num1, operator_symbol, num2, result))
+        print("\033[1;34;40m{} {} {} = {}\033[0m".format(num1, operator_symbol, num2, result))
 
     def get_repeat_choice():
         while True:
             try:
-                choice = input("Do you want to perform another calculation? (yes/no):")
+                choice = input("\033[1;33;40mDo you want to perform another calculation? (yes/no): \033[0m")
                 if choice.lower() == 'yes':
                     return True
                 elif choice.lower() == 'no':
@@ -50,4 +51,5 @@ class UserInterface:
                 else:
                     raise ValueError
             except ValueError:
-                print("An error occurred! Please enter 'yes' or 'no'.")
+                print("\033[1;31;40mAn error occurred! Please enter 'yes' or 'no'.\033[0m")
+                
