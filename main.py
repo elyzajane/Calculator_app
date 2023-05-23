@@ -15,3 +15,31 @@ def operate(num1, num2, operation):
         return Division.execute(num1, num2)
     else:
         raise ValueError("Invalid operation!")
+    
+def calculate():
+    UserInterface.display_options()
+    operation = UserInterface.get_operation_choice()
+    num1, num2 = UserInterface.get_numbers()
+    operator_symbol = ""
+
+    if operation == 1:
+        result = operate(num1, num2, 1)
+        operator_symbol = "+"
+    elif operation == 2:
+        result = operate(num1, num2, 2)
+        operator_symbol = "-"
+    elif operation == 3:
+        result = operate(num1, num2, 3)
+        operator_symbol = "*"
+    elif operation == 4:
+        result = operate(num1, num2, 4)
+        operator_symbol = "/"
+    else:
+        return
+
+    UserInterface.display_result(num1, operator_symbol, num2, result)
+
+    if UserInterface.get_repeat_choice():
+        calculate()
+    else:
+        print("Thank you and have a good day!")    
