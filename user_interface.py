@@ -18,6 +18,16 @@ class UserInterface:
                     raise ValueError
                 break
             except ValueError:
-                print("An error occurred! Please enter a valid choice (1/2/3/4):")
+                print("An error occurred! Please enter a valid choice (1/2/3/4).")
         return operation
+    
+    def get_numbers():
+        while True:
+            try:
+                num1 = float(input("Enter first number:"))
+                num2 = float(input("Enter second number:"))
+                break
+            except ValueError:
+                print("An error occurred! Please enter valid numbers.")
+        return num1, num2
     
