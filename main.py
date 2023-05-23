@@ -42,4 +42,12 @@ def calculate():
     if UserInterface.get_repeat_choice():
         calculate()
     else:
-        print("Thank you and have a good day!")    
+        print("Thank you and have a good day!")
+
+    def main():
+        UserInterface.display_greeting()
+        UserInterface.display_warning()
+        calculate()
+
+    if __name__ == '__main__':
+        main()    

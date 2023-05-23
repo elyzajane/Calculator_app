@@ -1,5 +1,10 @@
 class UserInterface:
 
+    def display_greeting():
+        print("\033[1;35;40m╦ ╦ ╦═╗╦  ╦  ╔═╗")
+        print("\033[1;35;40m╠═╣ ╠═ ║  ║  ║ ║")
+        print("\033[1;35;40m╩ ╩ ╩═╝╩═╝╩═╝╚═╝")
+        
     def display_warning():
         print("Kindly use the calculator app wisely!")
 
