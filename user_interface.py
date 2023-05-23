@@ -33,3 +33,16 @@ class UserInterface:
     
     def display_result(num1, operator_symbol, num2, result):
         print("{} {} {} = {}"(num1, operator_symbol, num2, result))
+
+    def get_repeat_choice():
+        while True:
+            try:
+                choice = input("Do you want to perform another calculation? (yes/no):")
+                if choice.lower() == 'yes':
+                    return True
+                elif choice.lower() == 'no':
+                    return False
+                else:
+                    raise ValueError
+            except ValueError:
+                print("An error occurred! Please enter 'yes' or 'no'.")
