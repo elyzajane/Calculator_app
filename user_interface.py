@@ -31,3 +31,5 @@ class UserInterface:
                 print("An error occurred! Please enter valid numbers.")
         return num1, num2
     
+    def display_result(num1, operator_symbol, num2, result):
+        print("{} {} {} = {}"(num1, operator_symbol, num2, result))
