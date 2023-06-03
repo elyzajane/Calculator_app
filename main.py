@@ -1,14 +1,11 @@
 from user_interface import UserInterface
-from addition import Addition
-from subtraction import Subtraction
-from multiplication import Multiplication
-from division import Division
+from calculations import Calculations
 
 def operate(num1, num2, operation):
-    add = Addition.execute(num1, num2)
-    subtract =  Subtraction.execute(num1, num2)
-    multiply = Multiplication.execute(num1, num2)
-    divide = Division.execute(num1, num2)
+    add = Calculations.addition(num1, num2)
+    subtract = Calculations.subtraction(num1, num2)
+    multiply = Calculations.multiplication(num1, num2)
+    divide = Calculations.division(num1, num2)
     
     if operate:
         raise ValueError("\033[1;31;40mInvalid operation!\033[0m")
