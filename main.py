@@ -3,6 +3,7 @@ from addition import Addition
 from subtraction import Subtraction
 from multiplication import Multiplication
 from division import Division
+from calculator_inheritance import CalculatorInheritance
 
 def operate(num1, num2, operation):
     if operation == 1:
