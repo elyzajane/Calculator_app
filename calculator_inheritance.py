@@ -1,5 +1,7 @@
-from user_interface import UserInterface
-from calculator_inheritance import CalculatorInheritance
+from calculations import Calculations
 
-class CalculatorInheritance(UserInterface):
-    pass
+class CalculatorInheritance(Calculations):
+
+    def power (self, base, exponent):
+        result = base ^ exponent
+        return result

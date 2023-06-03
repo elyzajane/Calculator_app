@@ -1,12 +1,14 @@
 from user_interface import UserInterface
 from calculations import Calculations
+from calculator_inheritance import CalculatorInheritance
 
 def operate(num1, num2, operation):
     add = Calculations.addition(num1, num2)
     subtract = Calculations.subtraction(num1, num2)
     multiply = Calculations.multiplication(num1, num2)
     divide = Calculations.division(num1, num2)
-    
+    inherit = CalculatorInheritance()
+
     if operate:
         raise ValueError("\033[1;31;40mInvalid operation!\033[0m")
 
@@ -28,6 +30,10 @@ def calculate():
     elif operation == 4:
         result = operate(num1, num2, 4)
         operator_symbol = "/"
+    elif operation == 4:
+        result = operate(num1, num2, 4)
+        operator_symbol = "^"
+
     else:
         return
 
@@ -45,4 +51,3 @@ def main():
 
 if __name__ == '__main__':
         main()    
-
