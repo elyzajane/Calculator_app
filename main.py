@@ -3,20 +3,16 @@ from addition import Addition
 from subtraction import Subtraction
 from multiplication import Multiplication
 from division import Division
-from calculator_inheritance import CalculatorInheritance
 
 def operate(num1, num2, operation):
-    if operation == 1:
-        return Addition.execute(num1, num2)
-    elif operation == 2:
-        return Subtraction.execute(num1, num2)
-    elif operation == 3:
-        return Multiplication.execute(num1, num2)
-    elif operation == 4:
-        return Division.execute(num1, num2)
-    else:
-        raise ValueError("\033[1;31;40mInvalid operation!\033[0m")
+    add = Addition.execute(num1, num2)
+    subtract =  Subtraction.execute(num1, num2)
+    multiply = Multiplication.execute(num1, num2)
+    divide = Division.execute(num1, num2)
     
+    if operate:
+        raise ValueError("\033[1;31;40mInvalid operation!\033[0m")
+
 def calculate():
     UserInterface.display_options()
     operation = UserInterface.get_operation_choice()
@@ -52,3 +48,4 @@ def main():
 
 if __name__ == '__main__':
         main()    
+
